@@ -36,31 +36,36 @@ namespace CABuscketGame
 
                 if (minValue < 0)
                 {
-                    Console.Clear();
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
-                    Console.WriteLine("Нельзя задать число меньше нуля для [Минимального(minValue)]. Попробуйте заново.");
+                    Console.WriteLine("Нельзя задать число меньше нуля для. Попробуйте заново.");
                     Console.ResetColor();
                     continue;
                 }
+                break;
+            }
 
+            while (true)
+            {
                 maxValue = Tools.EnterNum("Введите Максимальное(maxValue) число: ");
 
                 if (maxValue <= minValue)
                 {
-                    Console.Clear();
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
-                    Console.WriteLine("Нельзя задать число меньше минимального для [Максимального(maxValue)]. Попробуйте заново.");
+                    Console.WriteLine("Нельзя задать число меньше минимального. Попробуйте заново.");
                     Console.ResetColor();
                     continue;
                 }
+                break;
+            }
 
+            while (true)
+            {
                 quessNumber = Tools.EnterNum("Введите число которое будет Верным(quessNumber): ");
 
                 if (quessNumber > maxValue || quessNumber < minValue)
                 {
-                    Console.Clear();
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
-                    Console.WriteLine("Нельзя задать верное число вне диапазона для [Верного(maxValue)]. Попробуйте заново.");
+                    Console.WriteLine("Нельзя задать верное число вне диапазона. Попробуйте заново.");
                     Console.ResetColor();
                     continue;
                 }
